@@ -15,38 +15,27 @@
 
 ---
 
-### SAMBA API
+### Natural Language Processing
 
 <ol>
-<li class="fragment" data-fragment-index="1">New `delegate` operation on RDD[<span style="color:gray">AWSTask</span>]</li>
-<li class="fragment" data-fragment-index="2">This operation executes AWS Lambda functions</li>
-<li class="fragment" data-fragment-index="3">And generates RDD[<span style="color:gray">AWSResult</span>]</li>
+<li class="fragment" data-fragment-index="1"><span style="font-weight: bold">Lexical Category</span> – Nhóm từ vựng học</li>
+<li class="fragment" data-fragment-index="2"><span style="font-weight: bold">Pattern</span> – cú pháp hay ngữ pháp hình thành trong một câu</li>
+<li class="fragment" data-fragment-index="3"><span style="font-weight: bold">Intent</span> – xác định ý định, hay mục đích của câu được phân tích dựa trên ngữ cảnh giao tiếp.</li>
 </ol>
-
-<span class="fragment" data-fragment-index="4" style="font-size: 0.8em; color:gray">The SAMBA API is built on top of the <a target="_blank" href="https://github.com/onetapbeyond/aws-gataway-executor">aws-gateway-executor</a> library.</span>
 
 ---
 
-### aws-gateway-executor
+### Lexical Category
 
-- A lightweight, fluent Java library
-- For calling APIs on the Amazon Web Service API Gateway
-- Inside any application running on the JVM
-- Defines <span style="color:gray">AWSGateway</span>, <span style="color:gray">AWSTask</span> and <span style="color:gray">AWSResult</span>
+- Nhóm từ vựng học
+- Khái niệm này giúp định danh cho một tập các từ hoặc cụm từ cùng mang một ý nghĩa hay đề cập đến một nội dung cụ thể.
+- Ví du: Food là một Lexical Category bao gồm các từ như bún bò, hủ tiếu, …
 
 +++
 
-### AWSGateway
+### Example
 
-<span style="color:gray">A handle that represents an API on the AWS API Gateway.</span>
-
-```Java
-AWSGateway gateway = AWS.Gateway(echo-api-key)
-                        .stage("beta")
-                        .region(AWS.Region.OREGON)
-                        .build();
-```
-
+![Example](assets/image01.jpg)
 
 +++
 
