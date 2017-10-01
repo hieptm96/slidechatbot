@@ -43,13 +43,13 @@
 
 ### Example
 
-- § Action: dùng để chỉ các hành động của con người có liên quan tới thức ăn.
-- § Food: dùng để chỉ các món ăn.
-- § Where: dùng để xác định các từ để hỏi địa điểm.
-- § Delicious: là tập hợp các từ chỉ độ ngon của thức ăn.
-- § …: các lexical category khác tùy theo sự phức tạp của của một câu được phân tích
+<p style="font-size: 25px; text-align: left">- § Action: dùng để chỉ các hành động của con người có liên quan tới thức ăn.</p>
+<p style="font-size: 25px; text-align: left">- § Food: dùng để chỉ các món ăn.</p>
+<p style="font-size: 25px; text-align: left">- § Where: dùng để xác định các từ để hỏi địa điểm.</p>
+<p style="font-size: 25px; text-align: left">- § Delicious: là tập hợp các từ chỉ độ ngon của thức ăn.</p>
+<p style="font-size: 25px; text-align: left">- § …: các lexical category khác tùy theo sự phức tạp của của một câu được phân tích.</p>
 
-<span style="color: gray">Từ câu ví dụ trên chúng ta có thể gom lại thành một chuỗi các Lexical Category như sau:</span>
+<span style="color: gray; font-size: 25px">Từ câu ví dụ trên chúng ta có thể gom lại thành một chuỗi các Lexical Category như sau:</span>
 #### [Action][Food][Where][Delicious]
 
 ---
@@ -102,24 +102,34 @@ Context | Xác định ngữ cảnh của câu được phân tích hay giao ti�
 
 +++
 
-#### Guide
+#### Prebuilt Agent
 
 ![Guide img02](assets/guide-02.png)
 
-+++?gist=494e0fecaf0d6a2aa2acadfb8eb9d6e8
++++
+
+### Intents
+
+![Guide img03](assets/guide-03.png)
+
++++
+
+### Intent Contexts
+
+![Guide img03](assets/guide-04.png)
+
++++
+
+### Intent Responses
+
+![Guide img03](assets/guide-05.png)
 
 ---
 
-#### SAMBA Deployment Architecture
+### Docs
 
-![SAMBA Deployment](https://onetapbeyond.github.io/resource/img/samba/new-samba-deploy.jpg)
+- [API.AI docs](https://api.ai/docs/getting-started/basics)
 
 ---
 
-#### Some Related Links
-
-- [GitHub: SAMBA Package](https://github.com/onetapbeyond/lambda-spark-executor)
-- [GitHub: SAMBA Examples](https://github.com/onetapbeyond/lambda-spark-executor#samba-examples)
-- [GitHub: aws-gateway-executor](https://github.com/onetapbeyond/aws-gateway-executor)
-- [GitHub: Apache Spark](https://github.com/apache/spark)
-- [Apache Spark Packages](https://spark-packages.org/package/onetapbeyond/lambda-spark-executor)
+### Thank you
