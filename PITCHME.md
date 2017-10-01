@@ -1,17 +1,17 @@
 #HSLIDE
 
-### Apache Spark
-### AWS Lambda Executor
-### (SAMBA)
+### ứng dụng AI, NLP trong chatbot
+#### các vấn đề hiện đại trong công nghệ thông tin
 
-<span style="color:gray">An Apache Spark Package</span>
+<span style="color:gray">Nhóm 10</span>
 
 ---
 
-### SAMBA Apache Spark Package
+### API.AI
 
-  - Offers seamless integration with the AWS Lambda compute service
-  - Within Spark batch and streaming apps on the JVM
+  - Api.ai là một framework hỗ trợ xử lý ngôn ngữ tự nhiên nhằm hỗ trợ người lập trình xây dựng một công cụ liên quan đến giao tiếp tự động giữa người và máy tính.
+  - Api.ai’s Speech Recognition
+  - Natural Language Understanding and Conversation Management
 
 ---
 
