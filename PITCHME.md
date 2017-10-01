@@ -1,7 +1,7 @@
 #HSLIDE
 
-### ứng dụng AI, NLP trong chatbot
-#### các vấn đề hiện đại trong công nghệ thông tin
+### AI, NLP in chatbot
+<!-- #### các vấn đề hiện đại trong công nghệ thông tin -->
 
 <span style="color:gray">Nhóm 10</span>
 
