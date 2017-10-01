@@ -35,74 +35,76 @@
 
 ### Example
 
-![Example](assets/image01.jpg)
+![Example img01](assets/image01.jpg)
+<p>Câu hỏi trên được phân tích thành các Lexical Category như sau</p>
+![Example img02](assets/image02.jpg)
 
 +++
 
-### AWSTask
+### Example
 
-<span style="color:gray">An executable object that represents an AWS Gateway call.</span>
+- § Action: dùng để chỉ các hành động của con người có liên quan tới thức ăn.
+- § Food: dùng để chỉ các món ăn.
+- § Where: dùng để xác định các từ để hỏi địa điểm.
+- § Delicious: là tập hợp các từ chỉ độ ngon của thức ăn.
+- § …: các lexical category khác tùy theo sự phức tạp của của một câu được phân tích
 
-```Java
-AWSTask aTask = AWS.Task(gateway)
-                   .resource("/echo")
-                   .get();
-
-```
-
-+++
-
-### AWSResult
-
-<span style="color:gray">An object that represents the result of an AWS Gateway call.</span>
-
-```Java
-AWSResult aResult = aTask.execute();
-```
+<span style="color: gray">Từ câu ví dụ trên chúng ta có thể gom lại thành một chuỗi các Lexical Category như sau:</span>
+#### [Action][Food][Where][Delicious]
 
 ---
 
-### SAMBA + Apache Spark Batch Processing
+### Pattern
+
+  - cú pháp hay ngữ pháp hình thành trong một câu
+  - Vi dụ:  [Action][Food][Where][Delicious].
+  - Mục đích của pattern giúp xác định mẫu câu được dùng trong giao tiếp.
+
+---
+
+### Intent
+  - xác định ý định, hay mục đích của câu được phân tích dựa trên ngữ cảnh giao tiếp.
+  - Ví dụ:  với câu hỏi “Ăn phở ở đâu ngon?”, chúng ta hiểu intent “câu nói mong muốn xác định vị trí quán phở ở đâu là ngon”.
+
+---
+
+### API.AI 's basic concept
+
+Khái niệm | Mô tả
+------------ | -------------
+Agent | Tương đương như một ứng dụng trong api.ai. Đây cũng là nơi chúng ta tích hợp vào ứng dụng của mình để có thể dạy và test bot.
+Entity | Khái niệm tương tự như Lexical Category đã nói trên.
+Intent | Xác định ngữ cảnh của câu và ứng xử trong giao tiếp. Có ý nghĩa tương tự như phần giải thích về intent trên
 
 +++
 
-#### Step 1. Build RDD[<span style="color:gray">AWSTask</span>]
-
-```Scala
-import io.onetapbeyond.lambda.spark.executor.Gateway._
-import io.onetapbeyond.aws.gateway.executor._
-
-val aTaskRDD = dataRDD.map(data => {
-  AWS.Task(gateway)
-     .resource("/score")
-     .input(data.asInput())
-     .post()
-  })
-```
+Khái niệm | Mô tả
+------------ | -------------
+Action | Khi một intent được trigger thì action sẽ được thực hiện. Action đỏi hỏi các thông tin (parameter) tương ứng được tổng hợp từ các pattern kết hợp với các intent.
+Context | Xác định ngữ cảnh của câu được phân tích hay giao tiếp. Context bao gồm các intent, cho biết các câu nói đó thuộc những ngữ cảnh tương ứng để có cách ứng xử cho phù hợp.
 
 +++
 
-#### Step 2. Delegate RDD[<span style="color:gray">AWSTask</span>]
+### How to use?
 
-```Scala
-// Perform RDD[AWSTask].delegate operation to execute
-// AWS Gateway calls and generate resulting RDD[AWSResult].
+  - REST API
+  - Webhook
 
-val aResultRDD = aTaskRDD.delegate
-```
+---
+
+### Guide
+
+---
+
+#### Create Agent
+
+![Guide img01](assets/guide-01.png)
 
 +++
 
-#### Step 3. Process RDD[<span style="color:gray">AWSResult</span>]
+#### Guide
 
-```Scala
-// Process RDD[AWSResult] data per app requirements.
-
-aTaskResultRDD.foreach { result => {
-        println("TaskDelegation: compute score input=" +
-          result.input + " result=" + result.success)
-}}
-```
+![Guide img02](assets/guide-02.png)
 
 +++?gist=494e0fecaf0d6a2aa2acadfb8eb9d6e8
 
